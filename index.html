@@ -163,6 +163,68 @@ table.t tr.low td{background:var(--hold-bg)!important}
 .tw-foot span{display:inline-flex;align-items:center;gap:4px}
 .tw-foot i{width:7px;height:7px;border-radius:2px;display:block}
 
+
+/* ---------- water-themed front page ---------- */
+.wp-hero{position:relative;overflow:hidden;border-radius:20px;margin-bottom:22px;color:#fff;
+  background:radial-gradient(700px 260px at 85% 10%,rgba(127,214,255,.28),transparent 60%),linear-gradient(135deg,#0c2740 0%,#123d63 45%,#1b5f93 100%);
+  box-shadow:0 14px 34px rgba(12,39,64,.25)}
+.hero-in{position:relative;z-index:1;display:flex;align-items:center;gap:30px;padding:30px 36px 46px}
+.hero-txt{flex:1;min-width:0}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(240,180,41,.16);color:#f6c445;border:1px solid rgba(240,180,41,.35);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:700;letter-spacing:.3px}
+.hero-tag svg{width:15px;height:15px;fill:#f6c445}
+.wp-hero h2{margin:14px 0 6px;font-size:28px;font-weight:600;line-height:1.2;max-width:30ch}
+.wp-hero h2 b{color:#f6c445;font-weight:800}
+.wp-hero p{margin:0;color:#bcd3e8;font-size:15px}
+.hero-kpis{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.hk{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(4px);border-radius:12px;padding:9px 14px;font-size:13px;color:#cfe0ef}
+.hk i{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:13px}
+.hk b{font-size:20px;color:#fff;font-weight:700}
+.hk b small{font-size:13px;color:#9fbad3;font-weight:500}
+.hk.done i{background:#1f9d47;color:#fff}.hk.going i{background:#f0a81c;color:#3b2600}.hk.none i{background:rgba(255,255,255,.18);color:#fff}.hk.flat i{background:#f6c445;color:#1d1d1f}
+.gauge{position:relative;width:176px;height:176px;flex:none}
+.gsvg{width:100%;height:100%;display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.25))}
+.gw1{animation:wave 4s linear infinite}.gw2{animation:wave 6s linear infinite reverse}
+@keyframes wave{from{transform:translateX(0)}to{transform:translateX(-120px)}}
+.bub{animation:bub 3.5s ease-in infinite;opacity:0}.b2{animation-delay:1.2s}.b3{animation-delay:2.2s}
+@keyframes bub{0%{transform:translateY(0);opacity:0}20%{opacity:.8}100%{transform:translateY(-34px);opacity:0}}
+.gtxt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-shadow:0 2px 8px rgba(0,30,60,.5)}
+.gtxt b{font-size:34px;font-weight:800;line-height:1}
+.gtxt b small{font-size:18px;margin-left:1px}
+.gtxt span{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#e3f2fd;margin-top:4px;font-weight:600}
+.hero-waves{position:absolute;left:0;bottom:0;width:200%;height:70px;z-index:0}
+.hw{animation:hwave 18s linear infinite}.hw1{fill:rgba(127,214,255,.10)}.hw2{fill:rgba(127,214,255,.16);animation-duration:12s}
+@keyframes hwave{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.wc{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:stretch;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px 14px 14px;box-shadow:var(--shadow);cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s;min-height:150px}
+.wc:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(18,61,99,.14);border-color:#7fc4ef}
+.wc-tank{position:relative;border-radius:12px;background:linear-gradient(180deg,#f2f8fd,#e3eff8);border:2px solid #cfe2f1;overflow:hidden}
+:root[data-theme="dark"] .wc-tank{background:#1d2a36;border-color:#2c4357}
+.wc-water{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,#5cc2f2,#1c6fae);transition:height .8s ease}
+.wc-water::before{content:"";position:absolute;left:0;top:-7px;width:200%;height:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 4 Q6 0 12 4 T24 4 V8 H0Z' fill='%235cc2f2'/%3E%3C/svg%3E") repeat-x;background-size:24px 8px;animation:tw 2.4s linear infinite}
+.wc.low .wc-water{background:linear-gradient(180deg,#f6b26b,#e0662f)}
+.wc.low .wc-water::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 4 Q6 0 12 4 T24 4 V8 H0Z' fill='%23f6b26b'/%3E%3C/svg%3E")}
+.wc.mid .wc-water{background:linear-gradient(180deg,#f7cf5a,#e9a514)}
+.wc.mid .wc-water::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 4 Q6 0 12 4 T24 4 V8 H0Z' fill='%23f7cf5a'/%3E%3C/svg%3E")}
+@keyframes tw{from{transform:translateX(0)}to{transform:translateX(-24px)}}
+.wc-marks{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-evenly;pointer-events:none}
+.wc-marks i{display:block;height:1px;width:9px;background:rgba(31,111,174,.25);margin-left:auto}
+.wc-body{display:flex;flex-direction:column;gap:3px;min-width:0}
+.wc-top{display:flex;align-items:center;gap:8px}
+.wc-ic{min-width:28px;height:28px;padding:0 5px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,#123d63,#1b5f93);color:#f6c445;font-weight:800;font-size:11px}
+.wc-nm{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wc-pct{font-size:30px;font-weight:800;letter-spacing:-.5px;line-height:1.05;margin-top:6px;color:#123d63}
+:root[data-theme="dark"] .wc-pct{color:#9fd8ff}
+.wc-pct small{font-size:16px;font-weight:700;margin-left:1px}
+.wc.low .wc-pct{color:#c2410c}.wc.full .wc-pct{color:var(--done-ink)}
+.wc-sub{font-size:12.5px;color:var(--ink-2)}
+.wc-sub b{color:var(--ink)}
+.wc-foot{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:auto;padding-top:8px;border-top:1px dashed var(--line-2);font-size:12px;color:var(--ink-3);white-space:nowrap}
+.wc-foot b{color:var(--ink-2)}
+.wc-foot .pill{font-size:11.5px;padding:2px 9px}
+.tw-grid.wc-grid{grid-template-columns:repeat(auto-fill,minmax(232px,1fr))}
+@media (max-width:1000px){.hero-in{flex-direction:column-reverse;align-items:flex-start;padding:24px 22px 40px}.gauge{width:140px;height:140px}.wp-hero h2{font-size:22px}}
+@media (prefers-reduced-motion:reduce){.gw1,.gw2,.hw,.bub,.wc-water::before{animation:none}}
+
 /* ---------- report (reused) ---------- */
 .ctl{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) auto;gap:12px;align-items:end;margin:0 0 20px}
 .ctl label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-2);font-weight:600}
@@ -629,6 +691,56 @@ function render(){
 }
 
 /* ================= DASHBOARD ================= */
+/* ---------- water-themed front page ---------- */
+function gaugeSvg(p){
+  const y=(120-p*1.2-4).toFixed(1);
+  const wave='M0 6 Q15 0 30 6 T60 6 T90 6 T120 6 T150 6 T180 6 T210 6 T240 6 V140 H0Z';
+  return `<svg viewBox="0 0 120 120" class="gsvg" aria-hidden="true"><defs><clipPath id="gClip"><circle cx="60" cy="60" r="53"/></clipPath>
+    <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd6ff"/><stop offset="1" stop-color="#1c78c0"/></linearGradient></defs>
+    <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="2.5"/>
+    <g clip-path="url(#gClip)"><rect width="120" height="120" fill="rgba(255,255,255,.07)"/>
+      <g transform="translate(0 ${y})"><path class="gw2" d="${wave}" fill="#9fe0ff" opacity=".45"/><path class="gw1" d="${wave}" fill="url(#gWater)"/></g>
+      <circle cx="38" cy="${Math.min(108,Number(y)+30)}" r="2.2" fill="rgba(255,255,255,.55)" class="bub b1"/><circle cx="74" cy="${Math.min(110,Number(y)+40)}" r="1.6" fill="rgba(255,255,255,.5)" class="bub b2"/><circle cx="58" cy="${Math.min(112,Number(y)+52)}" r="2.6" fill="rgba(255,255,255,.45)" class="bub b3"/>
+    </g></svg><div class="gtxt"><b class="num">${p.toFixed(1)}<small>%</small></b><span>sealed</span></div>`;
+}
+function heroBanner(S,flats,fDone){
+  const nT=DATA.filter(b=>b.kind==='tower').length, nO=DATA.length-nT;
+  return `<section class="wp-hero">
+    <svg class="hero-waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hw hw1" d="M0 60 C240 20 480 100 720 60 S1200 20 1440 60 S1920 100 2160 60 S2640 20 2880 60 V120 H0Z"/>
+      <path class="hw hw2" d="M0 75 C240 40 480 110 720 75 S1200 40 1440 75 S1920 110 2160 75 S2640 40 2880 75 V120 H0Z"/></svg>
+    <div class="hero-in">
+      <div class="hero-txt">
+        <span class="hero-tag"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg>Waterproofing progress</span>
+        <h2><b class="num">${S.pct.toFixed(1)}%</b> of the waterproofing work is complete</h2>
+        <p>${n(S.stDone)} of ${n(S.stTotal)} steps done across ${nT} towers${nO?` and ${nO} service blocks`:''}.</p>
+        <div class="hero-kpis">
+          <span class="hk done"><i>✓</i><b class="num">${n(S.complete)}</b>areas done</span>
+          <span class="hk going"><i>◐</i><b class="num">${n(S.progress)}</b>going on</span>
+          <span class="hk none"><i>○</i><b class="num">${n(S.notstarted)}</b>not started</span>
+          ${flats?`<span class="hk flat"><i>⌂</i><b class="num">${fDone}<small>/${flats}</small></b>flats fully done</span>`:''}
+        </div>
+      </div>
+      <div class="gauge">${gaugeSvg(S.pct)}</div>
+    </div>
+  </section>`;
+}
+function waterCard(b){
+  const s=summarize(b.items), st=s.complete===s.areas?'complete':s.stDone?'progress':'notstarted';
+  const short=b.kind==='tower'?'T'+String(b.name.replace(/\D/g,'')).padStart(2,'0'):b.name.split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase();
+  const fl=flatsOf(b.items), fDone=fl.filter(f=>flatState(f.items)==='complete').length;
+  const tone=s.pct>=99.95?'full':s.pct>=90?'high':s.pct>=50?'mid':'low';
+  return `<button class="wc ${tone}" data-go="${esc(b.name)}" data-tip="${cardTip(b)}">
+    <span class="wc-tank" aria-hidden="true"><span class="wc-water" style="height:${Math.max(3,s.pct)}%"></span><span class="wc-marks"><i></i><i></i><i></i></span></span>
+    <span class="wc-body">
+      <span class="wc-top"><span class="wc-ic">${esc(short)}</span><span class="wc-nm">${esc(dispName(b.name))}</span></span>
+      <span class="wc-pct num">${s.pct>=99.95?'100':s.pct.toFixed(1)}<small>%</small></span>
+      <span class="wc-sub"><b class="num">${n(s.complete)}</b> / ${n(s.areas)} areas done</span>
+      <span class="wc-foot">${fl.length?`<span><b class="num">${fDone}</b>/${fl.length} flats</span>`:`<span>${n(s.areas)} areas</span>`}${pill(st)}</span>
+    </span>
+  </button>`;
+}
+
 function dispName(nm){const m=String(nm).match(/^Tower\s*(\d+)$/i);return m?'Tower-'+String(m[1]).padStart(2,'0'):nm;}
 function cardTip(b){
   const s=summarize(b.items), fl=flatsOf(b.items), fd=fl.filter(f=>flatState(f.items)==='complete').length;
@@ -653,7 +765,7 @@ function towerCard(b){
 function pDashboard(){
   const all=DATA.flatMap(b=>b.items), S=summarize(all), fl=flatsOf(all), fDone=fl.filter(f=>flatState(f.items)==='complete').length;
   setHead('Dashboard',`${n(S.areas)} areas in register · ${DATA.length} blocks · ${Math.round(S.pct)}% waterproofing done`);
-  let h=cardRows(towerCard);
+  let h=heroBanner(S,fl.length,fDone)+cardRows(waterCard).replace(/class="tw-grid"/g,'class="tw-grid wc-grid"');
   $('#app').innerHTML=h;
   document.querySelectorAll('[data-go]').forEach(el=>el.onclick=e=>{e.stopPropagation();hideTip();openBlock(el.dataset.go);});
 }
