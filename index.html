@@ -225,6 +225,52 @@ table.t tr.low td{background:var(--hold-bg)!important}
 @media (max-width:1000px){.hero-in{flex-direction:column-reverse;align-items:flex-start;padding:24px 22px 40px}.gauge{width:140px;height:140px}.wp-hero h2{font-size:22px}}
 @media (prefers-reduced-motion:reduce){.gw1,.gw2,.hw,.bub,.wc-water::before{animation:none}}
 
+
+/* remaining page */
+.wp-hero.rem{background:radial-gradient(700px 260px at 85% 10%,rgba(255,170,90,.22),transparent 60%),linear-gradient(135deg,#1a2233 0%,#2b2f45 45%,#5a3424 100%);box-shadow:0 14px 34px rgba(60,30,15,.25)}
+.wp-hero.rem .hw1{fill:rgba(255,180,110,.10)}.wp-hero.rem .hw2{fill:rgba(255,180,110,.15)}
+.wp-hero.rem h2 b{color:#ffb36b}
+.wp-hero.rem p{color:#d9c9bd}
+.hk.hot i{background:#e0662f;color:#fff}
+.rc .wc-tank{background:linear-gradient(180deg,#fdf6f0,#f7e9dd);border-color:#f0d6c2}
+:root[data-theme="dark"] .rc .wc-tank{background:#2d241f;border-color:#4a362b}
+.rc .wc-water{background:linear-gradient(180deg,#ffb36b,#e0662f)}
+.rc .wc-water::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 4 Q6 0 12 4 T24 4 V8 H0Z' fill='%23ffb36b'/%3E%3C/svg%3E")}
+.rc.cool .wc-water{background:linear-gradient(180deg,#ffd27a,#f0a81c)}
+.rc.cool .wc-water::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 4 Q6 0 12 4 T24 4 V8 H0Z' fill='%23ffd27a'/%3E%3C/svg%3E")}
+.rc .wc-ic{background:linear-gradient(135deg,#3a2a24,#7a3e22)}
+.rc .wc-pct{color:#c2410c}
+.rc.cool .wc-pct{color:#b26a00}
+:root[data-theme="dark"] .rc .wc-pct{color:#ffb36b}
+.rc .wc-pct em{font-style:normal;font-size:13px;font-weight:600;color:var(--ink-3);margin-left:6px;letter-spacing:0}
+.rc:hover{border-color:#f0b48a;box-shadow:0 12px 26px rgba(120,60,20,.14)}
+.rc-st{display:inline-flex;align-items:center;gap:5px}
+.rc-st i{width:8px;height:8px;border-radius:2px;display:inline-block}
+.rc-st i:nth-of-type(2){margin-left:6px}
+
+/* login: water theme */
+.login .l-art{background:radial-gradient(600px 300px at 80% 15%,rgba(127,214,255,.22),transparent 60%),linear-gradient(160deg,#0c2740 0%,#123d63 50%,#1b5f93 100%)!important;color:#d6e6f3}
+.login .l-art::after{display:none}
+.login .l-art h2{position:relative;z-index:1}
+.login .l-art h2 span{color:#f6c445}
+.login .l-art p{color:#bcd3e8!important;position:relative;z-index:1}
+.login .l-art .logo,.login .l-art>div{position:relative;z-index:1}
+.login .l-art .stats{gap:12px!important}
+.login .l-art .stats>div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(4px);border-radius:14px;padding:12px 18px;color:#bcd3e8}
+.l-waves{position:absolute;left:0;bottom:0;width:200%;height:160px;z-index:0}
+.l-waves .hw1{fill:rgba(127,214,255,.10)}.l-waves .hw2{fill:rgba(127,214,255,.16)}.l-waves .hw3{fill:rgba(127,214,255,.22);animation:hwave 9s linear infinite}
+.l-drop{position:absolute;right:8%;top:22%;width:230px;height:230px;z-index:0;opacity:.95}
+.l-bubbles i{position:absolute;bottom:40px;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);animation:lb 7s ease-in infinite;z-index:0}
+.l-bubbles i:nth-child(1){left:12%;animation-delay:0s}.l-bubbles i:nth-child(2){left:30%;width:5px;height:5px;animation-delay:2s}.l-bubbles i:nth-child(3){left:55%;width:10px;height:10px;animation-delay:4s}.l-bubbles i:nth-child(4){left:75%;width:6px;height:6px;animation-delay:1s}.l-bubbles i:nth-child(5){left:88%;animation-delay:3s}
+@keyframes lb{0%{transform:translateY(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-320px);opacity:0}}
+.login .l-form{background:radial-gradient(700px 380px at 100% 0%,rgba(127,196,239,.18),transparent 70%),radial-gradient(600px 300px at 0% 100%,var(--bg-glow),transparent 70%),var(--bg)!important}
+.l-card{border-top:4px solid #1b5f93!important;position:relative}
+.l-card h1{display:flex;align-items:center;gap:10px}
+.l-card h1 .dp{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,#123d63,#1b5f93)}
+.l-card h1 .dp svg{width:18px;height:18px;fill:#7fd6ff}
+@media (prefers-reduced-motion:reduce){.l-bubbles i,.l-waves path{animation:none}}
+@media (max-width:1200px){.l-drop{display:none}}
+
 /* ---------- report (reused) ---------- */
 .ctl{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) auto;gap:12px;align-items:end;margin:0 0 20px}
 .ctl label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-2);font-weight:600}
@@ -396,13 +442,21 @@ body.locked .login{display:grid}
 <body class="locked">
 <div class="login" id="login">
   <div class="l-art">
+    <svg class="l-waves" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hw hw1" d="M0 70 C240 30 480 110 720 70 S1200 30 1440 70 S1920 110 2160 70 S2640 30 2880 70 V160 H0Z"/>
+      <path class="hw hw2" d="M0 95 C240 60 480 130 720 95 S1200 60 1440 95 S1920 130 2160 95 S2640 60 2880 95 V160 H0Z"/>
+      <path class="hw hw3" d="M0 120 C240 95 480 145 720 120 S1200 95 1440 120 S1920 145 2160 120 S2640 95 2880 120 V160 H0Z"/></svg>
+    <svg class="l-drop" viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="ldg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd6ff" stop-opacity=".55"/><stop offset="1" stop-color="#1c78c0" stop-opacity=".25"/></linearGradient></defs>
+      <path d="M100 18 C100 18 156 82 156 122 A56 56 0 0 1 44 122 C44 82 100 18 100 18Z" fill="url(#ldg)" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+      <path d="M72 120 a30 30 0 0 0 22 30" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="5" stroke-linecap="round"/></svg>
+    <div class="l-bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     <div class="logo" style="border:0;padding:0;margin:0"><div class="wm"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true"><g fill="#d9a73a"><rect x="0" y="4" width="3" height="24"/><rect x="5" y="4" width="2" height="24"/><rect x="9" y="4" width="3" height="24"/><rect x="14" y="4" width="2" height="24"/><rect x="18" y="4" width="3" height="24"/><rect x="23" y="4" width="2" height="24"/></g></svg>HOMELAND</div><div class="sub">WATERPROOFING TRACKER</div></div>
     <div><h2>Waterproofing status of every tower, <span>live from site</span>.</h2><p>Towers 1–6, Club Area, WTP and STP — floor by floor and flat by flat, updated from the site Google Sheet every minute.</p></div>
     <div class="stats"><div><b>6</b>Towers</div><div><b>3</b>Service blocks</div><div><b>60 s</b>Auto update</div></div>
   </div>
   <div class="l-form">
     <form class="l-card" id="loginForm" autocomplete="on">
-      <h1>Sign in</h1><p class="s">Enter your user ID and password to open the dashboard.</p>
+      <h1><span class="dp"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg></span>Sign in</h1><p class="s">Enter your user ID and password to open the dashboard.</p>
       <div class="l-err" id="lErr"></div>
       <label for="lUser">User ID</label>
       <div class="l-field"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg><input id="lUser" name="username" autocomplete="username" placeholder="e.g. admin" required></div>
@@ -692,16 +746,16 @@ function render(){
 
 /* ================= DASHBOARD ================= */
 /* ---------- water-themed front page ---------- */
-function gaugeSvg(p){
+function gaugeSvg(p,label='sealed',c=['#7fd6ff','#1c78c0','#9fe0ff'],id='g'){
   const y=(120-p*1.2-4).toFixed(1);
   const wave='M0 6 Q15 0 30 6 T60 6 T90 6 T120 6 T150 6 T180 6 T210 6 T240 6 V140 H0Z';
-  return `<svg viewBox="0 0 120 120" class="gsvg" aria-hidden="true"><defs><clipPath id="gClip"><circle cx="60" cy="60" r="53"/></clipPath>
-    <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd6ff"/><stop offset="1" stop-color="#1c78c0"/></linearGradient></defs>
+  return `<svg viewBox="0 0 120 120" class="gsvg" aria-hidden="true"><defs><clipPath id="${id}Clip"><circle cx="60" cy="60" r="53"/></clipPath>
+    <linearGradient id="${id}Water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c[0]}"/><stop offset="1" stop-color="${c[1]}"/></linearGradient></defs>
     <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="2.5"/>
-    <g clip-path="url(#gClip)"><rect width="120" height="120" fill="rgba(255,255,255,.07)"/>
-      <g transform="translate(0 ${y})"><path class="gw2" d="${wave}" fill="#9fe0ff" opacity=".45"/><path class="gw1" d="${wave}" fill="url(#gWater)"/></g>
+    <g clip-path="url(#${id}Clip)"><rect width="120" height="120" fill="rgba(255,255,255,.07)"/>
+      <g transform="translate(0 ${y})"><path class="gw2" d="${wave}" fill="${c[2]}" opacity=".45"/><path class="gw1" d="${wave}" fill="url(#${id}Water)"/></g>
       <circle cx="38" cy="${Math.min(108,Number(y)+30)}" r="2.2" fill="rgba(255,255,255,.55)" class="bub b1"/><circle cx="74" cy="${Math.min(110,Number(y)+40)}" r="1.6" fill="rgba(255,255,255,.5)" class="bub b2"/><circle cx="58" cy="${Math.min(112,Number(y)+52)}" r="2.6" fill="rgba(255,255,255,.45)" class="bub b3"/>
-    </g></svg><div class="gtxt"><b class="num">${p.toFixed(1)}<small>%</small></b><span>sealed</span></div>`;
+    </g></svg><div class="gtxt"><b class="num">${p.toFixed(1)}<small>%</small></b><span>${label}</span></div>`;
 }
 function heroBanner(S,flats,fDone){
   const nT=DATA.filter(b=>b.kind==='tower').length, nO=DATA.length-nT;
@@ -773,6 +827,46 @@ function pDashboard(){
 
 /* ================= REMAINING WORK ================= */
 const PW={q:'',block:'',floor:'',step:'',state:'',sort:'sr',dir:1,limit:300};
+
+function remHero(all){
+  const S=summarize(all), rem=100-S.pct, pend=all.filter(i=>i.state!=='complete'), ps=S.stTotal-S.stDone;
+  const fl=flatsOf(all), fRem=fl.filter(f=>flatState(f.items)!=='complete').length;
+  const bRem=DATA.filter(b=>b.items.some(i=>i.state!=='complete')).length;
+  return `<section class="wp-hero rem">
+    <svg class="hero-waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hw hw1" d="M0 60 C240 20 480 100 720 60 S1200 20 1440 60 S1920 100 2160 60 S2640 20 2880 60 V120 H0Z"/>
+      <path class="hw hw2" d="M0 75 C240 40 480 110 720 75 S1200 40 1440 75 S1920 110 2160 75 S2640 40 2880 75 V120 H0Z"/></svg>
+    <div class="hero-in">
+      <div class="hero-txt">
+        <span class="hero-tag"><svg viewBox="0 0 24 24"><path d="M6.5 3h11M6.5 21h11M7.5 3v3c0 2 1.3 3.5 3 4.5L12 12l1.5-1.5c1.7-1 3-2.5 3-4.5V3M7.5 21v-3c0-2 1.3-3.5 3-4.5L12 12l1.5 1.5c1.7 1 3 2.5 3 4.5v3" fill="none" stroke="#f6c445" stroke-width="1.8"/></svg>Remaining work</span>
+        <h2><b class="num">${rem.toFixed(1)}%</b> of the waterproofing work is still to be done</h2>
+        <p>${n(ps)} steps left in ${n(pend.length)} areas across ${bRem} block${bRem===1?'':'s'}. Click a tower to see exactly where.</p>
+        <div class="hero-kpis">
+          <span class="hk going"><i>◐</i><b class="num">${n(S.progress)}</b>going on</span>
+          <span class="hk hot"><i>○</i><b class="num">${n(S.notstarted)}</b>not started</span>
+          ${fl.length?`<span class="hk flat"><i>⌂</i><b class="num">${fRem}<small>/${fl.length}</small></b>flats remaining</span>`:''}
+          <span class="hk none"><i>▦</i><b class="num">${bRem}<small>/${DATA.length}</small></b>blocks pending</span>
+        </div>
+      </div>
+      <div class="gauge">${gaugeSvg(rem,'remaining',['#ffc27a','#e0662f','#ffd9a8'],'r')}</div>
+    </div>
+  </section>`;
+}
+function remCard(b){
+  const s=summarize(b.items), rem=100-s.pct, pa=s.progress+s.notstarted;
+  const short=b.kind==='tower'?'T'+String(b.name.replace(/\D/g,'')).padStart(2,'0'):b.name.split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase();
+  const fl=flatsOf(b.items), fRem=fl.filter(f=>flatState(f.items)!=='complete').length;
+  const tone=rem>=50?'hot':rem>=10?'warm':'cool';
+  return `<button class="wc rc ${tone}" data-pgo="${esc(b.name)}" data-tip="${cardTip(b)}">
+    <span class="wc-tank" aria-hidden="true"><span class="wc-water" style="height:${Math.max(4,rem)}%"></span><span class="wc-marks"><i></i><i></i><i></i></span></span>
+    <span class="wc-body">
+      <span class="wc-top"><span class="wc-ic">${esc(short)}</span><span class="wc-nm">${esc(dispName(b.name))}</span></span>
+      <span class="wc-pct num">${rem.toFixed(1)}<small>%</small><em>left</em></span>
+      <span class="wc-sub"><b class="num">${n(pa)}</b> / ${n(s.areas)} areas remaining</span>
+      <span class="wc-foot"><span class="rc-st"><i style="background:var(--wip)"></i>${n(s.progress)}<i style="background:#e0662f"></i>${n(s.notstarted)}</span>${fl.length?`<span><b class="num">${fRem}</b>/${fl.length} flats</span>`:`<span>${n(s.stTotal-s.stDone)} steps</span>`}</span>
+    </span>
+  </button>`;
+}
 function pendCard(b){
   const s=summarize(b.items), pa=s.progress+s.notstarted, ps=s.stTotal-s.stDone;
   const tone=pa===0?'good':s.pct>=90?'near':s.pct>=50?'mid':'low';
@@ -799,7 +893,7 @@ function pPending(){
   const allS=summarize(all);
   setHead('Remaining Work',`${(100-allS.pct).toFixed(1)}% work remaining · ${n(pend.length)} areas · ${n(ps)} steps still to do`);
   const left=b=>b.items.some(i=>i.state!=='complete');
-  let h=DATA.some(left)?cardRows(pendCard,left):'<div class="empty" style="font-size:17px">✓ All waterproofing work is complete. Nothing remaining.</div>';
+  let h=DATA.some(left)?remHero(all)+cardRows(remCard,left).replace(/class="tw-grid"/g,'class="tw-grid wc-grid"'):`<section class="wp-hero"><div class="hero-in"><div class="hero-txt"><span class="hero-tag">✓ All done</span><h2>All waterproofing work is complete.</h2><p>Nothing remaining in any tower or block.</p></div><div class="gauge">${gaugeSvg(100)}</div></div></section>`;
   $('#app').innerHTML=h;
   document.querySelectorAll('[data-pgo]').forEach(el=>el.onclick=()=>{hideTip();openBlock(el.dataset.pgo,true);});
 }
