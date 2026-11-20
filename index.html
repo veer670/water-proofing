@@ -961,7 +961,7 @@ paintTheme();
 /* When started with start-dashboard.bat the local server keeps the users (users.json) and checks passwords.
    If the page is opened any other way (file or static hosting) it falls back to this built-in admin login. */
 const FALLBACK_USERS=[{id:'admin',name:'Administrator',role:'admin',hash:'e03c9098d63ad0b8903fe4ac4434e02e7c0a138be8b155976f924a3533f70c0a'}];
-let SERVER=false, ME=null;
+let SERVER=false, ME=null, PING=null;
 function sha256(str){
   const ascii=unescape(encodeURIComponent(str));
   function rr(v,a){return (v>>>a)|(v<<(32-a));}
@@ -992,7 +992,7 @@ async function api(path,body){
 }
 async function detectServer(){
   if(!/^https?:$/.test(location.protocol)) return false;
-  try{const r=await fetch('/api/ping',{cache:'no-store'});if(!r.ok)return false;const j=await r.json();return !!j.ok;}catch(e){return false;}
+  try{const r=await fetch('/api/ping',{cache:'no-store'});if(!r.ok)return false;const j=await r.json();PING=j;return !!j.ok&&j.storage!==false;}catch(e){return false;}
 }
 function logout(){try{sessionStorage.removeItem('wp-auth');localStorage.removeItem('wp-auth');}catch(e){} location.hash='#dashboard'; location.reload();}
 let started=false;
@@ -1041,7 +1041,9 @@ $('#pwBtn').onclick=()=>{
 let USERS_CACHE=null;
 async function pUsers(){
   setHead('Users','Create user IDs and passwords, and choose what each person can do');
-  if(!SERVER){ $('#app').innerHTML=`<div class="note">User management works when the dashboard is started with <b>start-dashboard.bat</b> (http://localhost:9375). Right now the page is opened another way, so only the built-in admin login is available.</div>`; return; }
+  if(!SERVER){ $('#app').innerHTML= PING&&PING.host==='vercel'
+      ? `<div class="note"><b>One-time setup needed on Vercel.</b> Open Vercel → this project → <b>Storage</b> → <b>Create</b> → <b>Blob</b> (choose <b>Private</b>) → connect it to this project, then go to <b>Deployments</b> → <b>⋯</b> → <b>Redeploy</b>. After that you can create users here. Until then only the built-in admin login works.</div>`
+      : `<div class="note">User management works when the dashboard is started with <b>start-dashboard.bat</b> (http://localhost:9375) or on Vercel with Blob storage connected. Right now only the built-in admin login is available.</div>`; return; }
   if(!USERS_CACHE) $('#app').innerHTML='<div class="loading"><div class="spin"></div>Loading users…</div>';
   try{ USERS_CACHE=(await api('/api/users')).users||[]; }catch(e){ $('#app').innerHTML=`<div class="note">${esc(e.message)}</div>`; return; }
   const U=USERS_CACHE, admins=U.filter(u=>u.role==='admin').length;
